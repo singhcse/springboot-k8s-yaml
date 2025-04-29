@@ -38,5 +38,4 @@
 		</plugins>
 		<finalName>springboot-k8s-demo</finalName>
 	</build>
-
 </project>
