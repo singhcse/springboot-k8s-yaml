@@ -9,6 +9,9 @@ spec:
   jobTemplate:
     spec:
       template:
+        metadata:
+          labels:
+            app: spring-boot-k8s
         spec:
           containers:
             - name: spring-boot-api-caller
