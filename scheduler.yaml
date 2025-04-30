@@ -4,7 +4,7 @@ metadata:
   name: spring-boot-api-caller-cronjob
 spec:
   schedule: "*/5 * * * *"  # This schedule runs the job every 5 minutes
-  successfulJobsHistoryLimit: 4
+  successfulJobsHistoryLimit: 2
   failedJobsHistoryLimit: 5
   jobTemplate:
     spec:
