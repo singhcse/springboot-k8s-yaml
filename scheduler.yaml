@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: spring-boot-api-caller-cronjob
+spec:
+  schedule: "*/5 * * * *"  # This schedule runs the job every 5 minutes
+  successfulJobsHistoryLimit: 2
+  failedJobsHistoryLimit: 5
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: spring-boot-api-caller
+              image: springboot-k8s-example:1.0  # Replace with your actual image
+              command: ["/bin/sh", "-c"]
+              args:
+                - curl -X GET "http://localhost:8080/scheduler"
+          restartPolicy: OnFailure
