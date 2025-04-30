@@ -16,7 +16,7 @@ public class SpringbootK8sDemoApplication {
 	@GetMapping("/scheduler")
 	public String displayMessage(){
 		logger.info("Scheduler starting at :::::::::::" + System.currentTimeMillis());
-		return "This api is working as a demo scheduler";
+		return "This api is working as a demo scheduler .....";
 
     }
 
